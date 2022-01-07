@@ -1,0 +1,46 @@
+colors:
+  primary:
+    background: "#13312F"
+    foreground: "#BDE3D6"
+  cursor:
+    text: "#101010"
+    cursor: "#BDE3D6"
+  normal:
+    black: "#000000"
+    red: "#85FBAC"
+    green: "#e1acff"
+    yellow: "#f9fd75"
+    blue: "#80bde4"
+    magenta: "#a78edb"
+    cyan: "#ffffff"
+    white: "#f3ebe2"
+  bright:
+    black: "#4d4d4d"
+    red: "#f00060"
+    green: "#70ff70"
+    yellow: "#f9fd80"
+    blue: "#5a9dc8"
+    magenta: "#8F81E7"
+    cyan: "#2AA198"
+    white: "#eeeeee"
+
+window:
+  padding:
+    x: 14
+    y: 14
+  opacity: 0.8
+
+font:  
+  normal:  
+    family: Hack
+    style: Regular
+  bold:
+    family: Hack
+    style: Regular
+  italic:
+    family: Hack
+    style: Regular
+  size: 10
+
+
+

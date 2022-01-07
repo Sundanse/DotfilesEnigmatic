@@ -1,0 +1,46 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d "un " "deux " "trois " "quatre " "chat " "musique " "travail "
+
+### BSPWM configuration ###
+bspc config border_width         3
+bspc config window_gap           12
+bspc config top_padding          0
+bspc config bottom_padding       0
+bspc config left_padding         12
+bspc config right_padding        12
+bspc config single_monocle       false
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config focus_follows_pointer true
+
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config remove_disabled_monitors true
+bspc config merge_overlapping_monitors true
+
+bspc rule -a KotatogramDesktop desktop=^5
+bspc rule -a discord desktop=^5
+bspc rule -a Spotify desktop=^6
+
+# border
+bspc config focused_border_color        "#41CCC4"
+bspc config normal_border_color         "#7E57C2"
+bspc config active_border_color         "#7E57C2"
+
+
+### autostart ###
+picom --experimental-backends &
+setxkbmap -layout us
+setxkbmap -option 'grp:alt_shift_toggle'
+
+# bar
+~/.config/polybar/launch.sh &
+# wall
+nitrogen --restore &
